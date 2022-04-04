@@ -1,0 +1,17 @@
+name= "cloudflare-faas"
+type = "javascript"
+workers_dev = true
+account_id = "7526710679b67e5e38a8ac860a7f1aad"
+
+compatibility_date = "2022-04-03"
+
+[build]
+command = "yarn run build"
+
+[build.upload]
+format = "service-worker"
+
+[env.production]
+kv_namespaces = [
+	 { binding = "TODO", id = "569c23fd38b54af3ac48e1533f3a2a10" }
+]
